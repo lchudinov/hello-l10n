@@ -30,7 +30,7 @@ const i18nAsset = {
 export const l10nConfig: L10nConfig = {
   format: 'language-region',
   providers: [
-    { name: 'app', asset: i18nAsset }
+    { name: 'app', asset: './assets/i18n/app', options: { version: '1.0.0' } },
   ],
   cache: true,
   keySeparator: '.',
