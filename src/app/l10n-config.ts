@@ -17,7 +17,7 @@ const i18nAsset = {
       other: "sviluppatori software"
     }
   },
-  'ru-Ru': {
+  'ru-RU': {
     greeting: 'Привет мир!',
     whoIAm: 'Я {{name}}',
     devs: {
@@ -34,7 +34,7 @@ export const l10nConfig: L10nConfig = {
   ],
   cache: true,
   keySeparator: '.',
-  defaultLocale: { language: 'ru-RU', currency: '', timeZone: 'Asia/Yekaterinburg' },
+  defaultLocale: { language: 'ru-RU', currency: 'RUB', timeZone: 'Asia/Yekaterinburg' },
   schema: [
     { locale: { language: 'en-US', currency: 'USD', timeZone: 'America/Los_Angeles' }, dir: 'ltr', text: 'United States' },
     { locale: { language: 'it-IT', currency: 'EUR', timeZone: 'Europe/Rome' }, dir: 'ltr', text: 'Italia' },
