@@ -15,6 +15,7 @@ export class HttpTranslationLoader implements L10nTranslationLoader {
     const options = {
       headers: this.headers,
     };
+    console.log(`about to load translations for ${language}`);
     return this.http.get(url, options);
   }
 

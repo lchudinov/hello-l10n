@@ -16,9 +16,9 @@ export class AppComponent {
     @Inject(L10N_LOCALE) public locale: L10nLocale,
     private translation: L10nTranslationService
   ) {
-    this.translation.setLocale({ language: 'ru-RU' });
     this.translation.onChange().subscribe(
       _locale => {
+        console.log(`locale changed to`, JSON.stringify(locale));
         this.greeting = this.translation.translate('greeting');
         this.whoIAm = this.translation.translate('whoIAm', { name: 'Angular l10n' });
       }
