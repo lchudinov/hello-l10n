@@ -4,17 +4,18 @@ import { L10nLocale, L10nStorage } from 'angular-l10n';
 
 @Injectable()
 export class L10nStorageService implements L10nStorage {
-
+  static key: string = 'language';
   constructor() { }
 
   public async read(): Promise<L10nLocale | null> {
-    const language = 'ru-RU';
+    const language = window.localStorage.getItem(L10nStorageService.key);
     console.log(`storage locale read`, language);
-    return Promise.resolve({ language });
+    return Promise.resolve(language ? JSON.parse(language) : null);
   }
 
   public async write(locale: L10nLocale): Promise<void> {
     console.log(`storage locale write`, locale.language);
+    window.localStorage.setItem(L10nStorageService.key, JSON.stringify(locale));
     return Promise.resolve();
   }
 
